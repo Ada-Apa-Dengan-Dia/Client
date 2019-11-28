@@ -83,7 +83,6 @@ function onSignIn(googleUser) {
     .done(token => {
       console.log(token.token);
       localStorage.setItem('token', token.token)
-      showTodo()
       $('.homepage').show()
       $('.login').hide()
     })
