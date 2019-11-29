@@ -7,7 +7,6 @@
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-	background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/05/black-parchment-paper-texture.jpg');
 }
 
 .forms-section {
@@ -282,4 +281,28 @@ body {
 	background: #fbfdff;
 	box-shadow: inset 0 0 0 2px #45e2cd;
 	transform: translateX(30%);
+}
+
+.welcome-page {
+	background-image: url("./assets/adaapadengandia-wallpaper.jpg") !important;
+	height: 100vh;
+	background-repeat: no-repeat;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/05/black-parchment-paper-texture.jpg');
+}
+
+.three-options{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url('./assets/pastel-rainbow.png');
 }

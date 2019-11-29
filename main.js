@@ -1,3 +1,16 @@
+$(document).ready(function () {
+  if (localStorage.getItem('token')) {
+    $('.welcome-page').show()
+    $('.login').hide()
+    $('.three-options').hide()
+  } else {
+    $('.login').show()
+    $('.welcome-page').hide()
+    $('.three-options').hide()
+
+  }
+})
+
 // login page animation function
 const switchers = [...document.querySelectorAll('.switcher')]
 
@@ -27,9 +40,9 @@ function signIn(event) {
         showConfirmButton: false,
         timer: 500
       })
-      showTodo()
-      $('.homepage').show()
+      $('.welcome-page').show()
       $('.login').hide()
+      $('.three-options').hide()
     })
     .fail(err => {
       console.log(err);
@@ -83,7 +96,7 @@ function onSignIn(googleUser) {
     .done(token => {
       console.log(token.token);
       localStorage.setItem('token', token.token)
-      $('.homepage').show()
+      $('.welcome-page').show()
       $('.login').hide()
     })
     .fail(err => {
@@ -94,4 +107,51 @@ function onSignIn(googleUser) {
         text: 'Something went wrong! Maybe you forgot your password?'
       })
     })
+}
+function signOut() {
+  let auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    localStorage.removeItem('token')
+    $('.login').show()
+    $('.welcome-page').hide()
+    $('.three-options').hide()
+    console.log('User signed out.')
+  });
+}
+
+function goToThreeOptions() {
+  event.preventDefault()
+  $(".go-to-three-options").click(function () {
+    $('.go-to-three-options').fadeOut(1000, function () {
+      $('.welcome-page').slideUp('slow')
+    })
+  })
+  $('.three-options').show()
+}
+
+function goToELI(event) {
+  event.preventDefault()
+  $('.three-options').slideUp(1000, function () {
+    $('.eli').hide()
+    $('.syiril').hide()
+    $('.alfred').hide()
+  })
+}
+
+function goToSYIRIL(event) {
+  event.preventDefault()
+  $('.three-options').slideUp(1000, function () {
+    $('.eli').hide()
+    $('.syiril').show()
+    $('.alfred').hide()
+  })
+}
+
+function goToALFRED(event) {
+  event.preventDefault()
+  $('.three-options').slideUp(1000, function () {
+    $('.eli').hide()
+    $('.syiril').hide()
+    $('.alfred').show()
+  })
 }
