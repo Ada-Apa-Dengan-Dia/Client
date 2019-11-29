@@ -183,11 +183,24 @@
 
 
 
-  <!-- WORD TO EMOJI -->
-  <div class="syiril" style="height: 100vh; background-color: pink; display: none;">
-    <p> by syril </p>
-  </div>
 
+  <!-- WORD TO EMOJI --> <p> by syril </p>
+  <div class="container">
+    <div id="emotion-analysis">
+      <div id="form-emotion-analysis">
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <input type="text" class="form-control" id="input-emotion-analysis">
+            </div>
+            <button onclick="emotionAnalysis()" type="button" class="btn btn-outline-primary">Submit</button>
+        </form>
+      </div>
+  </div>
+    <div class="container">
+        <div id="result-emotion-analysis"></div>
+    </div>
+  </div>
   <!-- END OF WORD TO EMOJI -->
 
 
@@ -239,7 +252,7 @@
   <script src="main.js"></script>
   <script src="picture.js"></script>
   <script src="caption.js"></script>
-
+  <script src="./emotionAnalysis.js"></script>
 </body>
 
 </html>
