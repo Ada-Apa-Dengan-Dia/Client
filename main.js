@@ -1,13 +1,14 @@
 $(document).ready(function () {
   if (localStorage.getItem('token')) {
     $('.welcome-page').show()
+    $('.go-to-three-options').show()
     $('.login').hide()
     $('.three-options').hide()
   } else {
     $('.login').show()
     $('.welcome-page').hide()
+    $('.go-to-three-options').hide()
     $('.three-options').hide()
-
   }
 })
 
@@ -41,6 +42,7 @@ function signIn(event) {
         timer: 500
       })
       $('.welcome-page').show()
+      $('.go-to-three-options').show()
       $('.login').hide()
       $('.three-options').hide()
     })
@@ -97,7 +99,9 @@ function onSignIn(googleUser) {
       console.log(token.token);
       localStorage.setItem('token', token.token)
       $('.welcome-page').show()
+      $('.go-to-three-options').show()
       $('.login').hide()
+      $('.three-options').hide()
     })
     .fail(err => {
       console.log(err)
@@ -154,4 +158,11 @@ function goToALFRED(event) {
     $('.syiril').hide()
     $('.alfred').show()
   })
+}
+
+function backToThreeOptions(event) {
+  event.preventDefault()
+  $('.alfred').hide()
+  $('.three-options').slideDown(1000)
+
 }
