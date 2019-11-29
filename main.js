@@ -136,7 +136,7 @@ function goToThreeOptions() {
 function goToELI(event) {
   event.preventDefault()
   $('.three-options').slideUp(1000, function () {
-    $('.eli').hide()
+    $('.eli').show()
     $('.syiril').hide()
     $('.alfred').hide()
   })
@@ -163,6 +163,7 @@ function goToALFRED(event) {
 function backToThreeOptions(event) {
   event.preventDefault()
   $('.alfred').hide()
+  $('.eli').hide()
+  $('.syiril').hide()
   $('.three-options').slideDown(1000)
-
 }
