@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/8b51b67b1f.js"></script>
+  <!-- ------- google font -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Pacifico">
+    <link rel="stylesheet" href="style-picture.css">
+  <!-- ------- google font -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -99,6 +105,66 @@
 
   <!-- PICTURE TO EMOJI --> <p> by alfred </p>
 
+  <div class="API-IMAGE">
+    <div class="container-fluid" style="height:100vh; background-color:#C54230; display:flex; justify-content: center; align-items:center;flex-direction: column;">
+
+      <h1 style="font-family: 'Pacifico'; color:white; font-size:72px;">Hmmm..</h1>
+      <hr size="30" style="border-color: white;width: 100px;height: 10px;">
+      <h4 style="color:white; font-weight: 200;">Dia ngepost gambar tapi</h4>
+      <h4 style="color:white; font-weight: 200;">kamu bingung maksudnya apa,</h4>
+      
+      <div class="form-picture" style="display: flex;justify-content: center;flex-direction: column;">
+
+        <div class="form-group" style="margin-bottom:0px">
+            <input style="background:transparent;margin-bottom:50px;color:white; width:600px;height:50px;border-radius: 50px;padding:30px;font-size:18px;" class="form-control" id="url-picture" aria-describedby="emailHelp" placeholder="enter url..">
+        </div>
+        <center><button type="button" id="fetch-url" class="btn btn btn-light btn-lg" style="width: 200px;height:70px;border-radius:50px;margin:50px;"><i class="fas fa-search" style="margin-right:20px"></i>Cari tau</button><button type="button" id="button-back" class="btn btn btn-light btn-lg" style="width: 200px;height:70px;border-radius:50px"></i>kembali</button></center>
+        
+      </div>
+      
+      <div class="picture-fetched">
+        
+      </div>
+      <!-- <div class="content" style="display: flex; justify-content: center;flex-direction: column;align-items: center;">
+          <div class="circular--landscape">
+           <img src="https://scontent-sin6-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/72175527_140781233886117_7898927742660670145_n.jpg?_nc_ht=scontent-sin6-2.cdninstagram.com&_nc_cat=1&oh=596c753f6bed3b1b1308511cf066c032&oe=5E6AA5AD" />
+          </div>
+
+          <div class="emojis">
+              <div class="circular--emoji">
+                  <img src="./assets/happy.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+              <div class="circular--emoji">
+                  <img src="./assets/angry.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+              <div class="circular--emoji">
+                  <img src="./assets/netural.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+              <div class="circular--emoji">
+                  <img src="./assets/shock.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+              <div class="circular--emoji">
+                  <img src="./assets/disgust.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+              <div class="circular--emoji">
+                  <img src="./assets/sad.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+              <div class="circular--emoji">
+                  <img src="./assets/fear.png" />
+                  <h3 style="color:white; text-align: center;">10%</h3>
+              </div>
+          </div>
+      </div> -->
+
+    </div>
+  </div>
+
   <!-- END OF PICTURE TO EMOJI -->
 
 
@@ -107,5 +173,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="main.js"></script>
+  <script src="picture.js"></script>
+
 </body>
 </html>
