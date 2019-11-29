@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://kit.fontawesome.com/8b51b67b1f.js"></script>
   <!-- ------- google font -->
@@ -12,17 +13,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-client_id"
     content="615735916353-g87vrooplo90410me2f6phj87inpfbmn.apps.googleusercontent.com">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Ada Apa Dengan Dia</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 </head>
+
 <body>
   <div class="login">
-    <div id="login" class="sign-in-up form">
+    <div id="login" class="sign-in-up">
       <section class="forms-section">
-        <h1 class="section-title">Lavish Todo</h1>
+        <h1 class="section-title">Ada Apa Dengan Dia</h1>
         <div class="forms">
           <div class="form-wrapper is-active">
             <button type="button" class="switcher switcher-login">
@@ -77,33 +80,79 @@
   </div>
   <!-- -------------------- END OF LOGIN PAGE -------------------- -->
 
-
   <!-- WHO ARE WE  -->
+  <div class="welcome-page">
+    <div class="row">
+      <nav class="navbar justify-content-between" style="background-color: transparent; width: 100%">
+        <a class="navbar-brand"> <img src="./assets/adaapadengandia-logo.png" style="width: 100px; height: 20px"> </a>
+        <button onclick="signOut()" type="button" class="btn btn-outline-dark">Log out</button>
+      </nav>
+    </div>
 
+    <div style="display: flex; justify-content: center; align-content: center; align-items: center;">
+      <button onclick="goToThreeOptions(event)" class="go-to-three-options"
+        style="background-color: transparent; border-color: transparent; width: 300px; height: 100px; margin-top: 30%;">
+        <img src="./assets/adaapadengandia-logo.png"> </button>
+    </div>
+  </div>
   <!-- END OF WHO ARE WE  -->
 
 
 
-  <!-- THREE OPTIONS --> <p> by etel </p>
+  <!-- THREE OPTIONS -->
+  <div class="three-options">
+    <div class="container">
+      <div class="row">
 
+        <div class="col s4">
+          <button onclick="goToELI(event)" type="button" class="btn btn-light">Arti Kata</button>
+          <!-- <button  class="go-to-ELI"
+            style="background-color: transparent; border-color: transparent; width: 300px; height: 100px"> ELI </button> -->
+        </div>
+
+        <div class="col s4">
+          <button onclick="goToSYIRIL(event)" type="button" class="btn btn-light">Makna Kata</button>
+          <!-- <button  class="go-to-SYIRIL"
+            style="background-color: transparent; border-color: transparent; width: 300px; height: 100px"> SYIRIL
+          </button> -->
+        </div>
+
+        <div class="col s4">
+          <button onclick="goToALFRED(event)" type="button" class="btn btn-light">Makna Visual</button>
+          <!-- <button  class="go-to-ALFRED"
+            style="background-color: transparent; border-color: transparent; width: 300px; height: 100px"> ALFRED
+          </button> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
   <!-- END OF THREE OPTIONS  -->
 
 
 
-  <!-- CAPTION TRANSLATE  --> <p> by eli </p>
-  <i class="fas fa-arrows-alt-h"></i>
+  <!-- CAPTION TRANSLATE  -->
+  <div class="eli" style="height: 100vh; background-color: yellowgreen; display: none;" >
+    <p> by eli </p>
+  </div>
 
   <!-- END OF CAPTION TRANSLATE  -->
 
 
 
-  <!-- WORD TO EMOJI --> <p> by syril </p>
+  <!-- WORD TO EMOJI -->
+  <div class="syiril" style="height: 100vh; background-color: pink; display: none;">
+    <p> by syril </p>
+  </div>
 
   <!-- END OF WORD TO EMOJI -->
 
 
 
-  <!-- PICTURE TO EMOJI --> <p> by alfred </p>
+  <!-- PICTURE TO EMOJI -->
+  <div class="alfred" style="height: 100vh; background-color: lavender; display: none;">
+    <p> by alfred </p>
+  </div>
 
   <div class="API-IMAGE">
     <div class="container-fluid" style="height:100vh; background-color:#C54230; display:flex; justify-content: center; align-items:center;flex-direction: column;">
@@ -168,12 +217,18 @@
   <!-- END OF PICTURE TO EMOJI -->
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="main.js"></script>
   <script src="picture.js"></script>
 
 </body>
+
 </html>
