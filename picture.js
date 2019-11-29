@@ -94,5 +94,6 @@ function fetchData(url){
     })
     .fail(err => {
         alert('no face detected')
+        console.log(err);
     })
 }

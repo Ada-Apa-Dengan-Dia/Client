@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-    <script src="https://kit.fontawesome.com/8b51b67b1f.js"></script>
+  <script src="https://kit.fontawesome.com/8b51b67b1f.js"></script>
   <!-- ------- google font -->
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Pacifico">
-    <link rel="stylesheet" href="style-picture.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet" href="style-picture.css">
   <!-- ------- google font -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,13 +87,6 @@
 
   <!-- WHO ARE WE  -->
   <div class="welcome-page">
-    <div class="row">
-      <nav class="navbar justify-content-between" style="background-color: transparent; width: 100%">
-        <a class="navbar-brand"> <img src="./assets/adaapadengandia-logo.png" style="width: 100px; height: 20px"> </a>
-        <button onclick="signOut()" type="button" class="btn btn-outline-dark">Log out</button>
-      </nav>
-    </div>
-
     <div style="display: flex; justify-content: center; align-content: center; align-items: center;">
       <button onclick="goToThreeOptions(event)" class="go-to-three-options"
         style="background-color: transparent; border-color: transparent; width: 300px; height: 100px; margin-top: 30%;">
@@ -107,24 +99,30 @@
 
   <!-- THREE OPTIONS -->
   <div class="three-options">
-    <div class="container">
+      <div class="rowNavbar" style="display: flex; align-items: flex-start;">
+        <nav class="navbar justify-content-between" style="background-color: transparent; width: 100%">
+          <a class="navbar-brand"> <img src="./assets/adaapadengandia-logo.png" style="width: 100px; height: 20px"> </a>
+          <button onclick="signOut()" type="button" class="btn btn-outline-dark">Log out</button>
+        </nav>
+      </div>
+    <div class="container" style="display: flex; justify-content: space-around; align-content: center; align-items: center; height: 100vh;">
       <div class="row">
 
         <div class="col s4">
-          <button onclick="goToELI(event)" type="button" class="btn btn-light">Arti Kata</button>
+          <button onclick="goToELI(event)" type="button" class="btn btn-light" style="width: 100px; height: 100px">Arti Kata</button>
           <!-- <button  class="go-to-ELI"
             style="background-color: transparent; border-color: transparent; width: 300px; height: 100px"> ELI </button> -->
         </div>
 
         <div class="col s4">
-          <button onclick="goToSYIRIL(event)" type="button" class="btn btn-light">Makna Kata</button>
+          <button onclick="goToSYIRIL(event)" type="button" class="btn btn-light" style="width: 100px; height: 100px">Makna Kata</button>
           <!-- <button  class="go-to-SYIRIL"
             style="background-color: transparent; border-color: transparent; width: 300px; height: 100px"> SYIRIL
           </button> -->
         </div>
 
         <div class="col s4">
-          <button onclick="goToALFRED(event)" type="button" class="btn btn-light">Makna Visual</button>
+          <button onclick="goToALFRED(event)" type="button" class="btn btn-light" style="width: 100px; height: 100px">Makna Visual</button>
           <!-- <button  class="go-to-ALFRED"
             style="background-color: transparent; border-color: transparent; width: 300px; height: 100px"> ALFRED
           </button> -->
@@ -176,6 +174,9 @@
         back
       </button>
     </div>
+  <!-- CAPTION TRANSLATE  -->
+  <div class="eli" style="height: 100vh; background-color: yellowgreen; display: none;">
+    <p> by eli </p>
   </div>
 
   <!-- END OF CAPTION TRANSLATE  -->
@@ -193,69 +194,36 @@
 
   <!-- PICTURE TO EMOJI -->
   <div class="alfred" style="height: 100vh; background-color: lavender; display: none;">
-    <p> by alfred </p>
-  </div>
+    <div class="API-IMAGE">
+      <div class="container-fluid"
+        style="height:100vh; background-color:#C54230; display:flex; justify-content: center; align-items:center;flex-direction: column;">
 
-  <div class="API-IMAGE">
-    <div class="container-fluid" style="height:100vh; background-color:#C54230; display:flex; justify-content: center; align-items:center;flex-direction: column;">
+        <h1 style="font-family: 'Pacifico'; color:white; font-size:72px;">Hmmm..</h1>
+        <hr size="30" style="border-color: white;width: 100px;height: 10px;">
+        <h4 style="color:white; font-weight: 200;">Dia ngepost gambar tapi</h4>
+        <h4 style="color:white; font-weight: 200;">kamu bingung maksudnya apa,</h4>
 
-      <h1 style="font-family: 'Pacifico'; color:white; font-size:72px;">Hmmm..</h1>
-      <hr size="30" style="border-color: white;width: 100px;height: 10px;">
-      <h4 style="color:white; font-weight: 200;">Dia ngepost gambar tapi</h4>
-      <h4 style="color:white; font-weight: 200;">kamu bingung maksudnya apa,</h4>
-      
-      <div class="form-picture" style="display: flex;justify-content: center;flex-direction: column;">
+        <div class="form-picture" style="display: flex;justify-content: center;flex-direction: column;">
 
-        <div class="form-group" style="margin-bottom:0px">
-            <input style="background:transparent;margin-bottom:50px;color:white; width:600px;height:50px;border-radius: 50px;padding:30px;font-size:18px;" class="form-control" id="url-picture" aria-describedby="emailHelp" placeholder="enter url..">
+          <div class="form-group" style="margin-bottom:0px">
+            <input
+              style="background:transparent;margin-bottom:50px;color:white; width:600px;height:50px;border-radius: 50px;padding:30px;font-size:18px;"
+              class="form-control" id="url-picture" aria-describedby="emailHelp" placeholder="enter url..">
+          </div>
+          <center><button type="button" id="fetch-url" class="btn btn btn-light btn-lg"
+              style="width: 200px;height:70px;border-radius:50px;margin:50px;"><i class="fas fa-search"
+                style="margin-right:20px"></i>Cari tau</button><button onclick="backToThreeOptions(event)" type="button"
+              id="button-back" class="btn btn btn-light btn-lg"
+              style="width: 200px;height:70px;border-radius:50px"></i>kembali</button></center>
+
         </div>
-        <center><button type="button" id="fetch-url" class="btn btn btn-light btn-lg" style="width: 200px;height:70px;border-radius:50px;margin:50px;"><i class="fas fa-search" style="margin-right:20px"></i>Cari tau</button><button type="button" id="button-back" class="btn btn btn-light btn-lg" style="width: 200px;height:70px;border-radius:50px"></i>kembali</button></center>
-        
-      </div>
-      
-      <div class="picture-fetched">
-        
-      </div>
-      <!-- <div class="content" style="display: flex; justify-content: center;flex-direction: column;align-items: center;">
-          <div class="circular--landscape">
-           <img src="https://scontent-sin6-2.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/72175527_140781233886117_7898927742660670145_n.jpg?_nc_ht=scontent-sin6-2.cdninstagram.com&_nc_cat=1&oh=596c753f6bed3b1b1308511cf066c032&oe=5E6AA5AD" />
-          </div>
 
-          <div class="emojis">
-              <div class="circular--emoji">
-                  <img src="./assets/happy.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-              <div class="circular--emoji">
-                  <img src="./assets/angry.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-              <div class="circular--emoji">
-                  <img src="./assets/netural.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-              <div class="circular--emoji">
-                  <img src="./assets/shock.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-              <div class="circular--emoji">
-                  <img src="./assets/disgust.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-              <div class="circular--emoji">
-                  <img src="./assets/sad.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-              <div class="circular--emoji">
-                  <img src="./assets/fear.png" />
-                  <h3 style="color:white; text-align: center;">10%</h3>
-              </div>
-          </div>
-      </div> -->
+        <div class="picture-fetched">
 
+        </div>
+      </div>
     </div>
   </div>
-
   <!-- END OF PICTURE TO EMOJI -->
 
 
