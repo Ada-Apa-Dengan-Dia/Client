@@ -13,7 +13,12 @@
   <meta name="google-signin-client_id"
     content="615735916353-g87vrooplo90410me2f6phj87inpfbmn.apps.googleusercontent.com">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Gupter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="caption.css">
+
   <title>Ada Apa Dengan Dia</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
@@ -91,7 +96,45 @@
 
 
   <!-- CAPTION TRANSLATE  --> <p> by eli </p>
-  <i class="fas fa-arrows-alt-h"></i>
+  <div class="container-fluid" style="background-color: #2F5B3C; height: 100vh;">
+    <div class="row">
+      <label for="title" style="font-family: 'Pacifico', cursive; color: rgb(255, 255, 255) !important; font-size: 80px; text-align: center; margin-left: 41%; margin-top: 10%; margin-bottom: 50px">
+        Translate
+      </label>
+    </div>
+    <div class="row">
+      <div class="col-md">
+          <div class="form-group">
+            <div class="row">
+              <div style="margin-bottom: 20px;">
+                <label for="exampleFormControlTextarea1" style="font-family: 'Pacifico', cursive; color: rgb(255, 255, 255) !important; font-size: 40px; text-align: center; margin-left: 230px; color: white; font-size: 40px; background-color: transparent; border: none;">  &nbsp; from  &nbsp;  &nbsp; :  &nbsp;  &nbsp; any language</label>
+              </div>
+              <!-- <div>
+                <input id="language" type="text" class="form-control" style="font-family: 'Pacifico', cursive; font-size: 30px; background-color: transparent; border: none; color: white; margin-top: 1px;">
+              </div> -->
+            </div>
+            <textarea id="from-lang" class="form-control" id="exampleFormControlTextarea1" rows="3" style="background-color: transparent; border-radius: 30px; margin-left: 60px; margin-right: 10px; width: 40vw; height: 25vh; color: white; font-family: 'Gupter', serif !important; font-size: 40px;"></textarea>
+          </div>
+      </div>
+      <div class="col-xsm">
+        <div>
+          <img onclick="detect()" style="height: 80px; width: 80px; display: flex; justify-content: center; align-items: center; margin-top: 200%;" src="./assets/logoijo.png" alt="translate_illustrator">
+        </div>
+      </div>
+      <div class="col-md">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1" style="font-family: 'Pacifico', cursive; color: rgb(255, 255, 255) !important; font-size: 40px; text-align: center; margin-left: 250px; margin-bottom: 30px; color: white;"> &nbsp; to  &nbsp;  &nbsp; :  &nbsp;  &nbsp; english  &nbsp;</label>
+            <!-- <div id=result></div> -->
+            <textarea id="to-lang" class="form-control" id="exampleFormControlTextarea1" rows="3" style="background-color: transparent; border-radius: 30px; margin-left: 45px; width: 40vw; height: 25vh; color: white; font-family: 'Gupter', serif !important; font-size: 40px;"></textarea>
+          </div>
+      </div>
+    </div>
+    <div>
+      <button type="button" id="button-back" class="btn btn btn-light btn-lg" style="width: 200px; height: 70px; border-radius: 50px; margin-left: 45%; margin-top: 60px; opacity: 0.3; font-size: 27px; font-family: 'Calistoga', cursive;">
+        back
+      </button>
+    </div>
+  </div>
 
   <!-- END OF CAPTION TRANSLATE  -->
 
@@ -169,11 +212,13 @@
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8b51b67b1f.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="main.js"></script>
   <script src="picture.js"></script>
+  <script src="caption.js"></script>
 
 </body>
 </html>
