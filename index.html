@@ -92,7 +92,22 @@
 
 
   <!-- WORD TO EMOJI --> <p> by syril </p>
-
+  <div class="container">
+    <div id="emotion-analysis">
+      <div id="form-emotion-analysis">
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <input type="text" class="form-control" id="input-emotion-analysis">
+            </div>
+            <button onclick="emotionAnalysis()" type="button" class="btn btn-outline-primary">Submit</button>
+        </form>
+      </div>
+  </div>
+    <div class="container">
+        <div id="result-emotion-analysis"></div>
+    </div>
+  </div>
   <!-- END OF WORD TO EMOJI -->
 
 
@@ -107,5 +122,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="main.js"></script>
+  <script src="./emotionAnalysis.js"></script>
 </body>
 </html>
